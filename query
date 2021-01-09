@@ -1,0 +1,6 @@
+http://61.155.145.10:18086/query?pretty=true&db=gateio&q=
+SELECT mean(last) FROM ticker where time >= '2021-01-04T00:00:00Z' and time<='2021-01-05T00:00:00Z' group by time(1h) TZ('Asia/Shanghai')
+
+SELECT max(last) FROM ticker where time >= '2021-01-04T00:00:00Z' and time<='2021-01-05T00:00:00Z' group by time(1h) TZ('Asia/Shanghai')
+
+SELECT mean(last) FROM ticker where time >= '2021-01-09T00:00:00Z' group by time(5m) TZ('Asia/Shanghai')
